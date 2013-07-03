@@ -132,7 +132,7 @@
   [^Coordinate coordinate]
   (let [[x y z] coord-keys
         coord {x (.x coordinate) y (.y coordinate) z (.z coordinate)}]
-    (if (.isNaN (z coord)) (dissoc coord z) coord)))
+    (if (.isNaN ^Double (z coord)) (dissoc coord z) coord)))
 
 (defn get-coords
   "Return a vec of map-coords for a JTS Geometry."
